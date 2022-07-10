@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.3.0/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.06b85387c4b2e5fc1e462b8112292434.js"
+  "/precache-manifest.6baa42a6e4b526a70a4029b4ab4936da.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "st-installations"});
