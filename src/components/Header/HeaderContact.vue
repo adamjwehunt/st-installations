@@ -1,6 +1,6 @@
 <template>
-  <div id="header-contact-wrap">
-    <address id="header-contact">
+  <div class="header-contact-wrap">
+    <address class="header-contact">
       <a :href="`tel:${info.phone}`">
         <h1>{{ header.callText }}</h1>
         <h1>{{ info.phone }}</h1>
@@ -24,7 +24,7 @@ export default {
 </script>
 
 <style lang="less" scoped>
-#header-contact-wrap {
+.header-contact-wrap {
   display: flex;
   justify-content: center;
   height: 48px;
@@ -32,7 +32,7 @@ export default {
   background: black;
   z-index: 6;
 
-  #header-contact {
+  .header-contact {
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
@@ -59,6 +59,7 @@ export default {
           font-size: 15px;
           letter-spacing: 1px;
         }
+
         @media only screen and (min-width: 422px) {
           &:first-child {
             display: block;

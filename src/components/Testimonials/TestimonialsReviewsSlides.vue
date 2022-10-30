@@ -57,7 +57,7 @@ export default {
       width: 85px;
 
       &.tt-5 {
-        background-image: url("../assets/social/thumbtack_5star.png");
+        background-image: url("../../assets/social/thumbtack_5star.png");
       }
     }
 
@@ -66,7 +66,7 @@ export default {
       width: 50px;
 
       &.fb-5 {
-        background-image: url("../assets/social/facebook_5star.png");
+        background-image: url("../../assets/social/facebook_5star.png");
       }
     }
   }

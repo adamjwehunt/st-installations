@@ -2,7 +2,7 @@
     <transition name="fade" mode="out-in">
       <main>
         <Banner :data="services.banner" />
-        <section id="services-panel-wrapper" class="container">
+        <section class="services-panel-wrapper container">
           <Services-panel
             v-for="service in services.servicesList"
             :key="service.id"
@@ -36,7 +36,7 @@ export default {
 </script>
 
 <style>
-#services-panel-wrapper .service-panel:last-child {
+.services-panel-wrapper .service-panel:last-child {
   border: 0;
 }
 </style>

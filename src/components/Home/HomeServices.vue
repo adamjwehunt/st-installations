@@ -4,9 +4,9 @@
       <h1 class="section-title">{{ homeServices.headerText }}</h1>
       <hr class="section-hr">
       <div class="col-sm-1"></div>
-      <div id="home-services-panel" class="col-sm-10">
+      <div class="home-services-panel col-sm-10">
         <p>{{ homeServices.summary }}</p>
-        <div id="home-services-grid">
+        <div class="home-services-grid">
           <HomeServicesLink
             v-for="service in services.servicesList"
             :key="service.id"
@@ -20,7 +20,7 @@
 
 <script>
 import content from "@/services/content.js";
-import HomeServicesLink from "@/components/HomeServicesLink.vue";
+import HomeServicesLink from "./HomeServicesLink.vue";
 
 export default {
   components: {
@@ -37,7 +37,7 @@ export default {
 </script>
 
 <style lang="less">
-#home-services-panel {
+.home-services-panel {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -55,21 +55,21 @@ export default {
   }
 }
 
-#home-services-grid {
+.home-services-grid {
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 0px;
 }
 
 @media only screen and (min-width: 460px) {
-  #home-services-grid {
+  .home-services-grid {
     grid-template-columns: 1fr 1fr;
     grid-gap: 0px 60px;
   }
 }
 
 @media only screen and (min-width: 992px) {
-  #home-services-grid {
+  .home-services-grid {
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 10px 100px;
   }

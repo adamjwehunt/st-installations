@@ -11,8 +11,8 @@
 <script>
 import content from "@/services/content.js";
 import Banner from "@/components/Banner.vue";
-import TestimonialsRatings from "@/components/TestimonialsRatings.vue";
-import TestimonialsReviews from "@/components/TestimonialsReviews.vue";
+import TestimonialsRatings from "@/components/Testimonials/TestimonialsRatings.vue";
+import TestimonialsReviews from "@/components/Testimonials/TestimonialsReviews.vue";
 
 export default {
   components: {

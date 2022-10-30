@@ -1,5 +1,5 @@
 <template>
-  <section id="partners">
+  <section class="partners">
     <div class="container">
       <div class="row">
         <h1 class="section-title">{{ partners.headerText }}</h1>
@@ -43,7 +43,7 @@ export default {
 </script>
 
 <style lang="less">
-#partners {
+.partners {
   .container {
     padding: 0;
     border-bottom: 2px solid #f4f4f4;
@@ -91,13 +91,13 @@ export default {
 }
 
 @media only screen and (min-width: 768px) {
-  #partners .VueCarousel-pagination {
+  .partners .VueCarousel-pagination {
     display: block;
   }
 }
 
 @media only screen and (min-width: 992px) {
-  #partners {
+  .partners {
     img {
       height: 50px;
     }

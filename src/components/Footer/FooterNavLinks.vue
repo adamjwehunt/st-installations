@@ -1,9 +1,9 @@
 <template>
-  <NavLinks id="footer-nav-links" />
+  <NavLinks class="footer-nav-links" />
 </template>
 
 <script>
-import NavLinks from "@/components/NavLinks.vue";
+import NavLinks from "../NavLinks.vue";
 
 export default {
   components: {
@@ -14,7 +14,7 @@ export default {
 </script>
 
 <style lang="less">
-#footer-nav-links {
+.footer-nav-links {
   font-weight: 700;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -23,7 +23,7 @@ export default {
 }
 
 @media only screen and (min-width: 768px) {
-  #footer-nav-links {
+  .footer-nav-links {
     justify-content: flex-start;
     padding-left: 20px;
     max-width: 400px;
@@ -32,7 +32,7 @@ export default {
 }
 
 @media only screen and (min-width: 1260px) {
-  #footer-nav-links {
+  .footer-nav-links {
     max-width: 800px;
   }
 }

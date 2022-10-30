@@ -6,9 +6,9 @@
     >
       <v-icon
         slot="activator"
-        id="mobile-menu-icon"
+        class="mobile-menu-icon"
       >menu</v-icon>
-      <NavLinks id="mobile-nav-links" />
+      <NavLinks class="mobile-nav-links" />
     </v-menu>
   </div>
 </template>
@@ -45,13 +45,13 @@ export default {
   }
 }
 
-#mobile-menu-icon {
+.mobile-menu-icon {
   display: block;
   font-size: 50px;
   user-select: none;
 }
 
-#mobile-nav-links {
+.mobile-nav-links {
   background: #fff;
   padding: 10px 10px 20px;
 
@@ -62,7 +62,7 @@ export default {
 }
 
 @media only screen and (min-width: 680px) {
-  #mobile-menu-icon,
+  .mobile-menu-icon,
   .v-menu__content {
     display: none;
   }

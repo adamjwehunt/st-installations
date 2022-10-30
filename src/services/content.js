@@ -351,7 +351,7 @@ export default {
   },
   component: {
     header: {
-      callText: "Call or text,",
+      callText: "Call or text",
       logo: {
         main: {
           src: require("../assets/logo.png")

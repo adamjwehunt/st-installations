@@ -6,8 +6,8 @@
 </template>
 
 <script>
-import FooterInfo from "@/components/FooterInfo.vue";
-import FooterNav from "@/components/FooterNav.vue";
+import FooterInfo from "./FooterInfo.vue";
+import FooterNav from "./FooterNav.vue";
 
 export default {
   components: {

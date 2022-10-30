@@ -1,5 +1,5 @@
 <template>
-  <ul id="footer-nav-social">
+  <ul class="footer-nav-social">
     <li>
       <a :href="info.fb.link" target="_blank">
         <i class="fa fa-facebook" aria-hidden="true"/>
@@ -16,7 +16,7 @@
         data-share="true"
       ></div>
     </li>
-    <li id="thumbtack">
+    <li class="thumbtack">
       <a target="_blank" :href="info.tt.link">
         <img
           src="https://static.thumbtackstatic.com/media/pages/profile/standard-widgets/pro-svg/inline.svg"
@@ -41,7 +41,7 @@ export default {
 </script>
 
 <style lang="less">
-#footer-nav-social {
+.footer-nav-social {
   display: flex;
   align-items: flex-start;
   justify-content: center;
@@ -63,7 +63,7 @@ export default {
     }
   }
 
-  #thumbtack {
+  .thumbtack {
     margin-top: 4px;
 
     img {
@@ -73,7 +73,7 @@ export default {
 }
 
 @media only screen and (min-width: 768px) {
-  #footer-nav-social {
+  .footer-nav-social {
     justify-content: end;
     margin-top: 18px;
     margin-left: 30px;
@@ -81,7 +81,7 @@ export default {
 }
 
 @media only screen and (min-width: 992px) {
-  #footer-nav-social {
+  .footer-nav-social {
     margin-left: 0px;
   }
 }

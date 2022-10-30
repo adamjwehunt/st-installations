@@ -5,8 +5,8 @@
         <h2 class="section-title">{{ homeSocial.headerText }}</h2>
         <hr class="section-hr">
         <div class="col-sm-1"></div>
-        <div id="plugin-container" class="col-sm-10">
-          <div id="fb-plugin">
+        <div class="plugin-container col-sm-10">
+          <div class="fb-plugin">
             <div
               class="fb-page"
               data-href="https://www.facebook.com/strongtowerinstallations/"
@@ -58,13 +58,13 @@ export default {
 </script>
 
 <style lang="less">
-#plugin-container {
+.plugin-container {
   display: flex;
   justify-content: center;
   background-repeat: no-repeat;
   background-size: contain;
 
-  #fb-plugin {
+  .fb-plugin {
     position: relative;
     margin: 10px;
     box-shadow: 0 3px 30px 5px rgba(0, 0, 0, 0.15);

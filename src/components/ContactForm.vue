@@ -3,7 +3,7 @@
     <div class="row">
       <div class="col-sm-1"></div>
       <div class="col-sm-10">
-        <div id="contact-form">
+        <div class="contact-form">
           <h1 class="section-title">{{ contact.header }}</h1>
           <hr class="section-hr">
           <v-form
@@ -81,7 +81,7 @@ export default {
 </script>
 
 <style lang="less">
-#contact-form {
+.contact-form {
   padding-top: 25px;
 
   .v-form {

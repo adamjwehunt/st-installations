@@ -6,8 +6,8 @@
 </template>
 
 <script>
-import HeaderContact from "@/components/HeaderContact.vue";
-import HeaderNav from "@/components/HeaderNav.vue";
+import HeaderContact from "./HeaderContact.vue";
+import HeaderNav from "./HeaderNav.vue";
 
 export default {
   components: {
