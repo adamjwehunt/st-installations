@@ -17,9 +17,9 @@ export default {
   data() {
     return {
       info: content.info,
-      header: content.component.header
+      header: content.component.header,
     };
-  }
+  },
 };
 </script>
 

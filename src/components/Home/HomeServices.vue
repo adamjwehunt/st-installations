@@ -2,7 +2,7 @@
   <section class="container">
     <div class="row">
       <h1 class="section-title">{{ homeServices.headerText }}</h1>
-      <hr class="section-hr">
+      <hr class="section-hr" />
       <div class="col-sm-1"></div>
       <div class="home-services-panel col-sm-10">
         <p>{{ homeServices.summary }}</p>
@@ -24,15 +24,15 @@ import HomeServicesLink from "./HomeServicesLink.vue";
 
 export default {
   components: {
-    HomeServicesLink
+    HomeServicesLink,
   },
   name: "HomeServices",
   data() {
     return {
       homeServices: content.page.home.services,
-      services: content.page.services
+      services: content.page.services,
     };
-  }
+  },
 };
 </script>
 

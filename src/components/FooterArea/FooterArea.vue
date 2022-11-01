@@ -1,8 +1,8 @@
 <template>
-    <footer>
-        <Footer-info/>
-        <Footer-nav/>
-    </footer>
+  <footer>
+    <Footer-info />
+    <Footer-nav />
+  </footer>
 </template>
 
 <script>
@@ -12,8 +12,8 @@ import FooterNav from "./FooterNav.vue";
 export default {
   components: {
     FooterInfo,
-    FooterNav
+    FooterNav,
   },
-  name: "Footer"
+  name: "FooterArea",
 };
 </script>

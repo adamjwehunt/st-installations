@@ -1,7 +1,7 @@
 <template>
   <transition name="fade" mode="out-in">
     <main>
-      <Banner :data="testimonials.banner" />
+      <PageBanner :data="testimonials.banner" />
       <TestimonialsReviews />
       <TestimonialsRatings />
     </main>
@@ -10,21 +10,21 @@
 
 <script>
 import content from "@/services/content.js";
-import Banner from "@/components/Banner.vue";
+import PageBanner from "@/components/PageBanner.vue";
 import TestimonialsRatings from "@/components/Testimonials/TestimonialsRatings.vue";
 import TestimonialsReviews from "@/components/Testimonials/TestimonialsReviews.vue";
 
 export default {
   components: {
-    Banner,
+    PageBanner,
     TestimonialsRatings,
-    TestimonialsReviews
+    TestimonialsReviews,
   },
-  name: "Testimonials",
+  name: "TestimonialsView",
   data() {
     return {
-      testimonials: content.page.testimonials
+      testimonials: content.page.testimonials,
     };
-  }
+  },
 };
 </script>

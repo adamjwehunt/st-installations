@@ -5,7 +5,7 @@
       <div class="col-sm-10">
         <div class="contact-form">
           <h1 class="section-title">{{ contact.header }}</h1>
-          <hr class="section-hr">
+          <hr class="section-hr" />
           <v-form
             class="v-form"
             method="POST"
@@ -31,10 +31,17 @@
               ></v-text-field>
             </v-flex>
             <v-flex class="form-input-wrapper xs12 sm12">
-              <v-textarea v-model="form.message" rows="2" name="Message" label="Your Message"></v-textarea>
+              <v-textarea
+                v-model="form.message"
+                rows="2"
+                name="Message"
+                label="Your Message"
+              ></v-textarea>
             </v-flex>
             <div id="button-wrapper">
-              <button :disabled="!form.valid" type="submit">Send Message</button>
+              <button :disabled="!form.valid" type="submit">
+                Send Message
+              </button>
             </div>
           </v-form>
         </div>
@@ -55,16 +62,16 @@ export default {
       form: {
         valid: false,
         name: "",
-        nameRules: [v => !!v || "Name is required"],
+        nameRules: [(v) => !!v || "Name is required"],
         email: "",
         emailRules: [
-          v => !!v || "E-mail is required",
-          v => /.+@.+/.test(v) || "E-mail must be valid"
+          (v) => !!v || "E-mail is required",
+          (v) => /.+@.+/.test(v) || "E-mail must be valid",
         ],
-        message: ""
-      }
+        message: "",
+      },
     };
-  }
+  },
   // methods: {
   //   submit() {
   //     if (this.$refs.form.validate()) {

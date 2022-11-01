@@ -1,25 +1,21 @@
 <template>
   <div class="review">
     <div class="review-header">
-      <h2>{{data.name}}</h2>
+      <h2>{{ data.name }}</h2>
       <a :href="info.link">
-        <img
-          class="img-responsive"
-          :src="logo"
-          :alt="info.alt"
-        >
+        <img class="img-responsive" :src="logo" :alt="info.alt" />
       </a>
     </div>
     <div :class="`review-rating ${rating}`"></div>
-    <div class="review-text">{{data.text}}</div>
-    <div class="review-date">{{data.date}}</div>
+    <div class="review-text">{{ data.text }}</div>
+    <div class="review-date">{{ data.date }}</div>
   </div>
 </template>
 
 <script>
 export default {
   name: "TestimonialsReviewsSlides",
-  props: ["data", "info", "logo", "rating"]
+  props: ["data", "info", "logo", "rating"],
 };
 </script>
 

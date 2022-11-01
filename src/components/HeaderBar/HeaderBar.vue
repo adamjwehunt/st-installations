@@ -1,7 +1,7 @@
 <template>
   <header>
-    <HeaderContact/>
-    <HeaderNav/>
+    <HeaderContact />
+    <HeaderNav />
   </header>
 </template>
 
@@ -12,8 +12,8 @@ import HeaderNav from "./HeaderNav.vue";
 export default {
   components: {
     HeaderContact,
-    HeaderNav
+    HeaderNav,
   },
-  name: "Header"
+  name: "HeaderBar",
 };
 </script>

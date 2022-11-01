@@ -10,7 +10,7 @@ Vue.config.productionTip = false;
 new Vue({
   created() {
     /*Init Facebook SDK*/
-    (function(d, s, id) {
+    (function (d, s, id) {
       var js;
       var fjs = d.getElementsByTagName(s)[0];
       if (d.getElementById(id)) {
@@ -28,5 +28,5 @@ new Vue({
      /*eslint-enable*/
   },
   router,
-  render: h => h(App)
+  render: (h) => h(App),
 }).$mount("#app");

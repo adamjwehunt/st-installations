@@ -7,9 +7,9 @@ import NavLinks from "../NavLinks.vue";
 
 export default {
   components: {
-    NavLinks
+    NavLinks,
   },
-  name: "FooterNavLinks"
+  name: "FooterNavLinks",
 };
 </script>
 

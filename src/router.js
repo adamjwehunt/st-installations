@@ -1,11 +1,11 @@
 import Vue from "vue";
 import Router from "vue-router";
-import Home from "@/views/Home";
-import Services from "@/views/Services";
-import About from "@/views/About";
-import Faqs from "@/views/Faqs";
-import Testimonials from "@/views/Testimonials";
-import Contact from "@/views/Contact";
+import HomeView from "@/views/HomeView";
+import ServicesView from "@/views/ServicesView";
+import AboutView from "@/views/AboutView";
+import FaqsView from "@/views/FaqsView";
+import TestimonialsView from "@/views/TestimonialsView";
+import ContactView from "@/views/ContactView";
 
 Vue.use(Router);
 
@@ -15,59 +15,59 @@ export default new Router({
     {
       path: "/",
       name: "HOME",
-      component: Home,
+      component: HomeView,
       meta: {
-        scrollToTop: true
-      }
+        scrollToTop: true,
+      },
     },
     {
       path: "/services",
       name: "SERVICES",
-      component: Services,
+      component: ServicesView,
       meta: {
-        scrollToTop: true
-      }
+        scrollToTop: true,
+      },
     },
     {
       path: "/about",
       name: "ABOUT",
-      component: About,
+      component: AboutView,
       meta: {
-        scrollToTop: true
-      }
+        scrollToTop: true,
+      },
     },
     {
       path: "/faqs",
       name: "FAQS",
-      component: Faqs,
+      component: FaqsView,
       meta: {
-        scrollToTop: true
-      }
+        scrollToTop: true,
+      },
     },
     {
       path: "/testimonials",
       name: "TESTIMONIALS",
-      component: Testimonials,
+      component: TestimonialsView,
       meta: {
-        scrollToTop: true
-      }
+        scrollToTop: true,
+      },
     },
     {
       path: "/contact",
       name: "CONTACT US",
-      component: Contact,
+      component: ContactView,
       meta: {
-        scrollToTop: true
-      }
+        scrollToTop: true,
+      },
     },
     {
       path: "*",
       redirect: "/",
       meta: {
         scrollToTop: true,
-        hidden: true
-      }
-    }
+        hidden: true,
+      },
+    },
   ],
   scrollBehavior(to, from, savedPosition) {
     if (savedPosition) {
@@ -79,16 +79,16 @@ export default new Router({
         position.selector = to.hash;
       }
 
-      if (to.matched.some(m => m.meta.scrollToTop)) {
+      if (to.matched.some((m) => m.meta.scrollToTop)) {
         position.x = 0;
         position.y = 0;
       }
 
-      return new Promise(resolve => {
+      return new Promise((resolve) => {
         setTimeout(() => {
           resolve(position);
         }, 0);
       });
     }
-  }
+  },
 });

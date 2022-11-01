@@ -3,20 +3,20 @@
     <div class="container">
       <div class="row">
         <h1 class="section-title">{{ partners.headerText }}</h1>
-        <hr class="section-hr">
+        <hr class="section-hr" />
         <carousel
           :autoplay="true"
           :navigationEnabled="true"
           :loop="true"
           navigationNextLabel="<i class='fa fa-chevron-right' aria-hidden='true'></i>"
           navigationPrevLabel="<i class='fa fa-chevron-left' aria-hidden='true'></i>"
-          :perPageCustom="[[0,1], [768, 2]]"
+          :perPageCustom="[
+            [0, 1],
+            [768, 2],
+          ]"
         >
-          <slide
-            v-for="logo in partners.logos"
-            :key="logo.id"
-          >
-            <div><img :src="logo.src" :alt="logo.alt"></div>
+          <slide v-for="logo in partners.logos" :key="logo.id">
+            <div><img :src="logo.src" :alt="logo.alt" /></div>
           </slide>
         </carousel>
       </div>
@@ -31,14 +31,14 @@ import { Carousel, Slide } from "vue-carousel";
 export default {
   components: {
     Carousel,
-    Slide
+    Slide,
   },
-  name: "Partners",
+  name: "PartnersCarousel",
   data() {
     return {
-      partners: content.component.partners
+      partners: content.component.partners,
     };
-  }
+  },
 };
 </script>
 

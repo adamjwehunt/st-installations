@@ -1,10 +1,10 @@
 <template>
   <transition name="fade" mode="out-in">
     <main>
-      <HomeHero/>
-      <HomeServices/>
-      <HomeSocial/>
-      <Partners/>
+      <HomeHero />
+      <HomeServices />
+      <HomeSocial />
+      <PartnersCarousel />
     </main>
   </transition>
 </template>
@@ -13,15 +13,15 @@
 import HomeHero from "@/components/Home/HomeHero.vue";
 import HomeServices from "@/components/Home/HomeServices.vue";
 import HomeSocial from "@/components/Home/HomeSocial.vue";
-import Partners from "@/components/Partners.vue";
+import PartnersCarousel from "@/components/PartnersCarousel.vue";
 
 export default {
   components: {
     HomeHero,
     HomeServices,
     HomeSocial,
-    Partners
+    PartnersCarousel,
   },
-  name: "Home"
+  name: "HomeView",
 };
 </script>

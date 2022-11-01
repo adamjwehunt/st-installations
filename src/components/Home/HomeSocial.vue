@@ -3,7 +3,7 @@
     <div class="container">
       <div class="row">
         <h2 class="section-title">{{ homeSocial.headerText }}</h2>
-        <hr class="section-hr">
+        <hr class="section-hr" />
         <div class="col-sm-1"></div>
         <div class="plugin-container col-sm-10">
           <div class="fb-plugin">

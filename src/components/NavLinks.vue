@@ -1,22 +1,26 @@
 <template>
   <nav>
     <ul class="navigation">
-        <router-link
-          v-for="route in $router.options.routes"
-          v-if="!route.meta.hidden"
-          :key="route.name"
-          :to="route"
-          tag="li"
-        >
-          {{route.name}}
-        </router-link>
+      <router-link
+        v-for="route in routes"
+        :key="route.name"
+        :to="route"
+        tag="li"
+      >
+        {{ route.name }}
+      </router-link>
     </ul>
   </nav>
 </template>
 
 <script>
 export default {
-  name: "NavLinks"
+  computed: {
+    routes() {
+      return this.$router.options.routes.filter((route) => !route.meta.hidden);
+    },
+  },
+  name: "NavLinks",
 };
 </script>
 

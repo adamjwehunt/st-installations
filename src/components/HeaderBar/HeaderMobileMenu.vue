@@ -1,13 +1,7 @@
 <template>
   <div data-app>
-    <v-menu
-      attach="#header-nav-wrap"
-      absolute
-    >
-      <v-icon
-        slot="activator"
-        class="mobile-menu-icon"
-      >menu</v-icon>
+    <v-menu attach="#header-nav-wrap" absolute>
+      <v-icon slot="activator" class="mobile-menu-icon">menu</v-icon>
       <NavLinks class="mobile-nav-links" />
     </v-menu>
   </div>
@@ -18,9 +12,9 @@ import NavLinks from "@/components/NavLinks.vue";
 
 export default {
   components: {
-    NavLinks
+    NavLinks,
   },
-  name: "HeaderMobileMenu"
+  name: "HeaderMobileMenu",
 };
 </script>
 

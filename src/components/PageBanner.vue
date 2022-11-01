@@ -1,9 +1,9 @@
 <template>
-  <div class='banner'>
+  <div class="banner">
     <div
       class="img"
       :id="data.id"
-      :style="{ backgroundImage: `url('${data.image.src}')`}"
+      :style="{ backgroundImage: `url('${data.image.src}')` }"
     />
     <div class="banner-filter"></div>
     <h1>{{ data.text }}</h1>
@@ -13,7 +13,7 @@
 <script>
 export default {
   props: ["data"],
-  name: "Banner"
+  name: "PageBanner",
 };
 </script>
 

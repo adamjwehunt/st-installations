@@ -1,7 +1,7 @@
 <template>
   <transition name="fade" mode="out-in">
     <main>
-      <Banner :data="contact.banner" />
+      <PageBanner :data="contact.banner" />
       <ContactForm />
     </main>
   </transition>
@@ -9,19 +9,19 @@
 
 <script>
 import content from "@/services/content.js";
-import Banner from "@/components/Banner.vue";
+import PageBanner from "@/components/PageBanner.vue";
 import ContactForm from "@/components/ContactForm.vue";
 
 export default {
   components: {
-    Banner,
-    ContactForm
+    PageBanner,
+    ContactForm,
   },
-  name: "Contact",
+  name: "ContactView",
   data() {
     return {
-      contact: content.page.contact
+      contact: content.page.contact,
     };
-  }
+  },
 };
 </script>

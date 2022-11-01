@@ -3,14 +3,11 @@
     <div class="container">
       <div class="row">
         <h1 class="section-title">{{ faqs.header }}</h1>
-        <hr class="section-hr">
+        <hr class="section-hr" />
       </div>
       <div class="qsAndAs-wrapper row">
         <ul>
-          <li
-            v-for="qAndA in faqs.qsAndAs"
-            :key="qAndA.id"
-          >
+          <li v-for="qAndA in faqs.qsAndAs" :key="qAndA.id">
             <div class="question">{{ qAndA.q }}</div>
             <div class="answer">{{ qAndA.a }}</div>
           </li>
@@ -27,9 +24,9 @@ export default {
   name: "FaqsQandA",
   data() {
     return {
-      faqs: content.page.faqs
+      faqs: content.page.faqs,
     };
-  }
+  },
 };
 </script>
 

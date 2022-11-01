@@ -2,7 +2,7 @@
   <ul class="footer-nav-social">
     <li>
       <a :href="info.fb.link" target="_blank">
-        <i class="fa fa-facebook" aria-hidden="true"/>
+        <i class="fa fa-facebook" aria-hidden="true" />
       </a>
     </li>
     <li>
@@ -34,9 +34,9 @@ export default {
   name: "FooterNavSocial",
   data() {
     return {
-      info: content.info
+      info: content.info,
     };
-  }
+  },
 };
 </script>
 
