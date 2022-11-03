@@ -35,35 +35,35 @@
 
 <script>
 export default {
-	name: 'HomeSocial',
-	props: ['header'],
-	created() {
-		function loadFacebookIframe() {
-			setTimeout(() => {
-				if (FB) {
-					FB.XFBML.parse();
-				}
-			}, 0);
-		}
-		loadFacebookIframe();
-	},
+  name: "HomeSocial",
+  props: ["header"],
+  created() {
+    function loadFacebookIframe() {
+      setTimeout(() => {
+        if (FB) {
+          FB.XFBML.parse();
+        }
+      }, 0);
+    }
+    loadFacebookIframe();
+  },
 };
 </script>
 
 <style lang="less">
 .plugin-container {
-	display: flex;
-	justify-content: center;
-	background-repeat: no-repeat;
-	background-size: contain;
+  display: flex;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 
-	.fb-plugin {
-		position: relative;
-		margin: 10px;
-		box-shadow: 0 3px 30px 5px rgba(0, 0, 0, 0.15);
-		height: 500px;
-		width: 100%;
-		max-width: 500px;
-	}
+  .fb-plugin {
+    position: relative;
+    margin: 10px;
+    box-shadow: 0 3px 30px 5px rgba(0, 0, 0, 0.15);
+    height: 500px;
+    width: 100%;
+    max-width: 500px;
+  }
 }
 </style>

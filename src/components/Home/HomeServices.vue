@@ -19,53 +19,53 @@
 </template>
 
 <script>
-import HomeServicesLink from './HomeServicesLink.vue';
+import HomeServicesLink from "./HomeServicesLink.vue";
 
 export default {
-	name: 'HomeServices',
-	props: ['header', 'summary', 'services'],
-	components: {
-		HomeServicesLink,
-	},
+  name: "HomeServices",
+  props: ["header", "summary", "services"],
+  components: {
+    HomeServicesLink,
+  },
 };
 </script>
 
 <style lang="less">
 .home-services-panel {
-	display: flex;
-	align-items: center;
-	flex-direction: column;
-	padding: 50px 14px;
-	margin-top: 10px;
-	box-shadow: 0 3px 30px 5px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 50px 14px;
+  margin-top: 10px;
+  box-shadow: 0 3px 30px 5px rgba(0, 0, 0, 0.15);
 
-	p {
-		padding: 0 10%;
-		font-size: 17px;
-		line-height: 36px;
-		color: #797979;
-		margin-bottom: 20px;
-		text-align: center;
-	}
+  p {
+    padding: 0 10%;
+    font-size: 17px;
+    line-height: 36px;
+    color: #797979;
+    margin-bottom: 20px;
+    text-align: center;
+  }
 }
 
 .home-services-grid {
-	display: grid;
-	grid-template-columns: 1fr;
-	grid-gap: 0px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 0px;
 }
 
 @media only screen and (min-width: 460px) {
-	.home-services-grid {
-		grid-template-columns: 1fr 1fr;
-		grid-gap: 0px 60px;
-	}
+  .home-services-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0px 60px;
+  }
 }
 
 @media only screen and (min-width: 992px) {
-	.home-services-grid {
-		grid-template-columns: 1fr 1fr 1fr;
-		grid-gap: 10px 100px;
-	}
+  .home-services-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px 100px;
+  }
 }
 </style>

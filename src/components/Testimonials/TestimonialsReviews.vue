@@ -42,154 +42,158 @@
 </template>
 
 <script>
-import { Carousel, Slide } from 'vue-carousel';
-import TestimonialsReviewsSlides from './TestimonialsReviewsSlides.vue';
-import imageUrlBuilder from '@sanity/image-url';
-import sanity from '../../client';
+import { Carousel, Slide } from "vue-carousel";
+import TestimonialsReviewsSlides from "./TestimonialsReviewsSlides.vue";
+import imageUrlBuilder from "@sanity/image-url";
+import sanity from "../../client";
 
 const imageBuilder = imageUrlBuilder(sanity);
 
 export default {
-	name: 'TestimonialsReviews',
-	props: ['testimonialsView', 'reviews', 'basicInfo'],
+  name: "TestimonialsReviews",
+  props: ["testimonialsView", "reviews", "basicInfo"],
   data: (instance) => ({
-    facebookReviews: instance.reviews.filter(review => review.source === 'facebook'),
-    thumbtackReviews: instance.reviews.filter(review => review.source === 'thumbtack'),
+    facebookReviews: instance.reviews.filter(
+      (review) => review.source === "facebook"
+    ),
+    thumbtackReviews: instance.reviews.filter(
+      (review) => review.source === "thumbtack"
+    ),
   }),
-	components: {
-		Carousel,
-		Slide,
-		TestimonialsReviewsSlides,
-	},
-	methods: {
-		imageUrlFor(source) {
-			return imageBuilder.image(source);
-		},
-	},
+  components: {
+    Carousel,
+    Slide,
+    TestimonialsReviewsSlides,
+  },
+  methods: {
+    imageUrlFor(source) {
+      return imageBuilder.image(source);
+    },
+  },
 };
 </script>
 
 <style lang="less">
 .reviews {
-	.reviews-carousel {
-		display: flex;
-		justify-content: center;
-	}
+  .reviews-carousel {
+    display: flex;
+    justify-content: center;
+  }
 
-	.VueCarousel {
-		width: 680px;
+  .VueCarousel {
+    width: 680px;
 
-		.VueCarousel-slide {
-			display: flex;
-			justify-content: center;
-		}
+    .VueCarousel-slide {
+      display: flex;
+      justify-content: center;
+    }
 
-		.VueCarousel-navigation--disabled {
-			display: none;
-		}
+    .VueCarousel-navigation--disabled {
+      display: none;
+    }
 
-		.VueCarousel-navigation-button {
-			font-size: 30px !important;
-			top: 200px !important;
-		}
+    .VueCarousel-navigation-button {
+      font-size: 30px !important;
+      top: 200px !important;
+    }
 
-		.VueCarousel-navigation-prev {
-			left: 32%;
-		}
+    .VueCarousel-navigation-prev {
+      left: 32%;
+    }
 
-		.VueCarousel-navigation-next {
-			right: 32%;
-		}
+    .VueCarousel-navigation-next {
+      right: 32%;
+    }
 
-		.VueCarousel-navigation-prev,
-		.VueCarousel-navigation-next {
-			color: #797979;
-		}
+    .VueCarousel-navigation-prev,
+    .VueCarousel-navigation-next {
+      color: #797979;
+    }
 
-		.VueCarousel-pagination,
-		.VueCarousel-navigation--disabled {
-			display: none;
-		}
-	}
+    .VueCarousel-pagination,
+    .VueCarousel-navigation--disabled {
+      display: none;
+    }
+  }
 }
 
 @media only screen and (min-width: 400px) {
-	.reviews {
-		.VueCarousel {
-			.VueCarousel-navigation-prev {
-				left: 28%;
-			}
+  .reviews {
+    .VueCarousel {
+      .VueCarousel-navigation-prev {
+        left: 28%;
+      }
 
-			.VueCarousel-navigation-next {
-				right: 28%;
-			}
-		}
-	}
+      .VueCarousel-navigation-next {
+        right: 28%;
+      }
+    }
+  }
 }
 
 @media only screen and (min-width: 460px) {
-	.reviews {
-		.VueCarousel {
-			.VueCarousel-navigation-prev {
-				left: 24%;
-			}
+  .reviews {
+    .VueCarousel {
+      .VueCarousel-navigation-prev {
+        left: 24%;
+      }
 
-			.VueCarousel-navigation-next {
-				right: 24%;
-			}
-		}
-	}
+      .VueCarousel-navigation-next {
+        right: 24%;
+      }
+    }
+  }
 }
 
 @media only screen and (min-width: 520px) {
-	.reviews {
-		.VueCarousel {
-			.VueCarousel-navigation-prev {
-				left: 20%;
-			}
+  .reviews {
+    .VueCarousel {
+      .VueCarousel-navigation-prev {
+        left: 20%;
+      }
 
-			.VueCarousel-navigation-next {
-				right: 20%;
-			}
-		}
-	}
+      .VueCarousel-navigation-next {
+        right: 20%;
+      }
+    }
+  }
 }
 
 @media only screen and (min-width: 768px) {
-	.reviews {
-		.VueCarousel .VueCarousel-pagination {
-			display: block;
-		}
-	}
+  .reviews {
+    .VueCarousel .VueCarousel-pagination {
+      display: block;
+    }
+  }
 }
 
 @media only screen and (min-width: 992px) {
-	.reviews {
-		.VueCarousel {
-			width: 900px;
+  .reviews {
+    .VueCarousel {
+      width: 900px;
 
-			.VueCarousel-navigation-prev {
-				left: 5%;
-			}
+      .VueCarousel-navigation-prev {
+        left: 5%;
+      }
 
-			.VueCarousel-navigation-next {
-				right: 5%;
-			}
-		}
-	}
+      .VueCarousel-navigation-next {
+        right: 5%;
+      }
+    }
+  }
 }
 
 @media only screen and (min-width: 1260px) {
-	.reviews {
-		.VueCarousel {
-			.VueCarousel-navigation-prev {
-				left: -4%;
-			}
+  .reviews {
+    .VueCarousel {
+      .VueCarousel-navigation-prev {
+        left: -4%;
+      }
 
-			.VueCarousel-navigation-next {
-				right: -4%;
-			}
-		}
-	}
+      .VueCarousel-navigation-next {
+        right: -4%;
+      }
+    }
+  }
 }
 </style>

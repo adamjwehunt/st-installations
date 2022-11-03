@@ -46,64 +46,64 @@
 </template>
 
 <script>
-import imageUrlBuilder from '@sanity/image-url';
-import sanity from '../../client';
+import imageUrlBuilder from "@sanity/image-url";
+import sanity from "../../client";
 
 const imageBuilder = imageUrlBuilder(sanity);
 
 export default {
-	name: 'TestimonialsRatings',
-	props: ['testimonialsView', 'basicInfo'],
-	methods: {
-		imageUrlFor(source) {
-			return imageBuilder.image(source);
-		},
-	},
+  name: "TestimonialsRatings",
+  props: ["testimonialsView", "basicInfo"],
+  methods: {
+    imageUrlFor(source) {
+      return imageBuilder.image(source);
+    },
+  },
 };
 </script>
 
 <style lang="less">
 .ratings-wrapper {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
-	align-items: center;
-	width: 100%;
-	padding: 0 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  padding: 0 30px;
 
-	a {
-		display: flex;
-		flex-direction: column;
-		margin: 40px 0 32px;
-	}
+  a {
+    display: flex;
+    flex-direction: column;
+    margin: 40px 0 32px;
+  }
 
-	.thumbtack-ratings-wrapper {
-		width: 350px;
-		max-width: 100%;
+  .thumbtack-ratings-wrapper {
+    width: 350px;
+    max-width: 100%;
 
-		.thumbtack-logo {
-			width: 130px;
-		}
-	}
+    .thumbtack-logo {
+      width: 130px;
+    }
+  }
 
-	.facebook-ratings-wrapper {
-		justify-content: space-between;
-		height: 100px;
-		width: 220px;
+  .facebook-ratings-wrapper {
+    justify-content: space-between;
+    height: 100px;
+    width: 220px;
 
-		.facebook-ratings-img {
-			width: 220px;
-		}
+    .facebook-ratings-img {
+      width: 220px;
+    }
 
-		.facebook-logo {
-			width: 130px;
-		}
-	}
+    .facebook-logo {
+      width: 130px;
+    }
+  }
 }
 
 @media only screen and (min-width: 992px) {
-	.ratings-wrapper {
-		flex-direction: row;
-	}
+  .ratings-wrapper {
+    flex-direction: row;
+  }
 }
 </style>

@@ -19,36 +19,36 @@
 
 <script>
 export default {
-	name: 'QandAs',
-	props: ['header', 'qAndAs'],
+  name: "QandAs",
+  props: ["header", "qAndAs"],
 };
 </script>
 
 <style lang="less">
 .qsAndAs-wrapper {
-	display: flex;
-	justify-content: center;
-	padding: 0 30px;
+  display: flex;
+  justify-content: center;
+  padding: 0 30px;
 
-	ul {
-		max-width: 700px;
-		margin-top: 20px;
+  ul {
+    max-width: 700px;
+    margin-top: 20px;
 
-		li {
-			margin-bottom: 60px;
-		}
+    li {
+      margin-bottom: 60px;
+    }
 
-		.question {
-			font-size: 18px;
-			line-height: 26px;
-			font-weight: 600;
-		}
+    .question {
+      font-size: 18px;
+      line-height: 26px;
+      font-weight: 600;
+    }
 
-		.answer {
-			font-size: 16px;
-			line-height: 22px;
-			padding-top: 10px;
-		}
-	}
+    .answer {
+      font-size: 16px;
+      line-height: 22px;
+      padding-top: 10px;
+    }
+  }
 }
 </style>

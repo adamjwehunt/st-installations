@@ -24,61 +24,61 @@
 
 <script>
 export default {
-	props: ['phone', 'email'],
-	name: 'FooterInfoContact',
+  props: ["phone", "email"],
+  name: "FooterInfoContact",
 };
 </script>
 
 <style lang="less" scoped>
 .footer-info-contact {
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
-	margin-left: -8px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: -8px;
 
-	div {
-		display: flex;
-		align-items: center;
-		margin: 10px 0;
+  div {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
 
-		i {
-			width: 22px;
-			margin-right: 8px;
-			font-size: 20px;
-			color: #a7090a;
-			text-align: center;
-		}
+    i {
+      width: 22px;
+      margin-right: 8px;
+      font-size: 20px;
+      color: #a7090a;
+      text-align: center;
+    }
 
-		a {
-			font-size: 14px;
-			color: #4a4a4a;
-		}
-	}
+    a {
+      font-size: 14px;
+      color: #4a4a4a;
+    }
+  }
 }
 
 @media only screen and (min-width: 375px) {
-	.footer-info-contact div {
-		a {
-			font-size: 18px;
-		}
+  .footer-info-contact div {
+    a {
+      font-size: 18px;
+    }
 
-		i {
-			width: 30px;
-			margin-right: 16px;
-		}
-	}
+    i {
+      width: 30px;
+      margin-right: 16px;
+    }
+  }
 }
 
 @media only screen and (min-width: 768px) {
-	.footer-info-contact div {
-		i {
-			font-size: 16px;
-			margin-right: 10px;
-		}
+  .footer-info-contact div {
+    i {
+      font-size: 16px;
+      margin-right: 10px;
+    }
 
-		a {
-			font-size: 15px;
-		}
-	}
+    a {
+      font-size: 15px;
+    }
+  }
 }
 </style>

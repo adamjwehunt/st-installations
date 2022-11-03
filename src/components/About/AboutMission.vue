@@ -11,7 +11,7 @@
         </div>
         <div class="about-summary col-sm-6 col-sm-offset-1">
           <p>{{ firstParagraph }}</p>
-          <p>{{ secondParagraph}}</p>
+          <p>{{ secondParagraph }}</p>
           <p>{{ quote }}</p>
         </div>
       </div>
@@ -20,7 +20,6 @@
 </template>
 
 <script>
-
 export default {
   name: "AboutMission",
   props: ["header", "firstParagraph", "secondParagraph", "quote"],

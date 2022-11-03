@@ -15,18 +15,18 @@
 
 <script>
 export default {
-	name: 'AboutTeam',
-	props: ['header', 'imageSrc'],
+  name: "AboutTeam",
+  props: ["header", "imageSrc"],
 };
 </script>
 
 <style lang="less">
 .about-team-image img {
-	width: auto;
-	height: auto;
-	max-height: 475px;
-	margin: 0 auto;
-	display: block;
-	max-width: 100%;
+  width: auto;
+  height: auto;
+  max-height: 475px;
+  margin: 0 auto;
+  display: block;
+  max-width: 100%;
 }
 </style>
