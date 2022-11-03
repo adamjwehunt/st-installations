@@ -2,17 +2,17 @@
   <section>
     <div class="container">
       <div class="row">
-        <h1 class="section-title">{{ mission.header }}</h1>
+        <h1 class="section-title">{{ header }}</h1>
         <hr class="section-hr" />
       </div>
       <div class="row">
         <div class="about-quote col-sm-offset-1 col-md-2">
-          <p>"{{ mission.quote }}"</p>
+          <p>"{{ quote }}"</p>
         </div>
         <div class="about-summary col-sm-6 col-sm-offset-1">
-          <p>{{ mission.summary.partOne }}</p>
-          <p>{{ mission.summary.partTwo }}</p>
-          <p>{{ mission.quote }}</p>
+          <p>{{ firstParagraph }}</p>
+          <p>{{ secondParagraph}}</p>
+          <p>{{ quote }}</p>
         </div>
       </div>
     </div>
@@ -20,15 +20,10 @@
 </template>
 
 <script>
-import content from "@/services/content.js";
 
 export default {
   name: "AboutMission",
-  data() {
-    return {
-      mission: content.page.about.mission,
-    };
-  },
+  props: ["header", "firstParagraph", "secondParagraph", "quote"],
 };
 </script>
 

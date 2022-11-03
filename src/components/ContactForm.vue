@@ -4,7 +4,7 @@
       <div class="col-sm-1"></div>
       <div class="col-sm-10">
         <div class="contact-form">
-          <h1 class="section-title">{{ contact.header }}</h1>
+          <h1 class="section-title">{{ header }}</h1>
           <hr class="section-hr" />
           <v-form
             class="v-form"
@@ -51,95 +51,80 @@
 </template>
 
 <script>
-import content from "@/services/content.js";
-
 export default {
-  name: "ContactForm",
-  data() {
-    return {
-      info: content.info,
-      contact: content.page.contact,
-      form: {
-        valid: false,
-        name: "",
-        nameRules: [(v) => !!v || "Name is required"],
-        email: "",
-        emailRules: [
-          (v) => !!v || "E-mail is required",
-          (v) => /.+@.+/.test(v) || "E-mail must be valid",
-        ],
-        message: "",
-      },
-    };
-  },
-  // methods: {
-  //   submit() {
-  //     if (this.$refs.form.validate()) {
-  //       axios.post("/api/submit", {
-  //         name: this.form.name,
-  //         email: this.form.email,
-  //         select: this.select,
-  //         checkbox: this.checkbox
-  //       });
-  //     }
-  //   }
-  // }
+	name: 'ContactForm',
+	props: ['header'],
+	data() {
+		return {
+			form: {
+				valid: false,
+				name: '',
+				nameRules: [(v) => !!v || 'Name is required'],
+				email: '',
+				emailRules: [
+					(v) => !!v || 'E-mail is required',
+					(v) => /.+@.+/.test(v) || 'E-mail must be valid',
+				],
+				message: '',
+			},
+		};
+	},
 };
 </script>
 
 <style lang="less">
 .contact-form {
-  padding-top: 25px;
+	padding-top: 25px;
 
-  .v-form {
-    margin-top: 60px;
+	.v-form {
+		margin-top: 60px;
 
-    .form-input-wrapper {
-      margin-bottom: 24px;
+		.form-input-wrapper {
+			margin-bottom: 24px;
 
-      .v-label {
-        cursor: text;
-        font-size: 14px;
-        color: #999;
-      }
-    }
+			.v-label {
+				cursor: text;
+				font-size: 14px;
+				color: #999;
+			}
+		}
 
-    #button-wrapper {
-      display: flex;
-      justify-content: flex-end;
-      height: 80px;
-      width: 100%;
+		#button-wrapper {
+			display: flex;
+			justify-content: flex-end;
+			height: 80px;
+			width: 100%;
 
-      button {
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        margin-right: 27px;
-        border: 0;
-        text-transform: uppercase;
-        padding: 18px 26px;
-        border-radius: 2px;
-        font-size: 16px;
-        font-weight: 500;
-        line-height: 22px;
-        letter-spacing: 2px;
-        transition: background 0.2s ease-in-out, color 0.2s ease-in-out,
-          box-shadow 0.2s ease-in-out;
-        box-shadow: 0 12px 19px 0 rgba(0, 0, 0, 0.24);
-        background: #a7090a;
-        color: #fff;
+			button {
+				position: absolute;
+				right: 0;
+				bottom: 0;
+				margin-right: 27px;
+				border: 0;
+				text-transform: uppercase;
+				padding: 18px 26px;
+				border-radius: 2px;
+				font-size: 16px;
+				font-weight: 500;
+				line-height: 22px;
+				letter-spacing: 2px;
+				transition: background 0.2s ease-in-out, color 0.2s ease-in-out,
+					box-shadow 0.2s ease-in-out;
+				box-shadow: 0 12px 19px 0 rgba(0, 0, 0, 0.24);
+				background: #a7090a;
+				color: #fff;
 
-        &:hover {
-          box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.5);
-          text-decoration: none;
-        }
-      }
+				&:hover {
+					box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.5);
+					text-decoration: none;
+				}
+			}
 
-      button[disabled] {
-        background: #999;
-        box-shadow: none;
-      }
-    }
-  }
+			button[disabled] {
+				background: #999;
+				box-shadow: none;
+			}
+		}
+	}
 }
 </style>

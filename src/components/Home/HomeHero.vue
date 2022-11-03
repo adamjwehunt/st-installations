@@ -1,31 +1,24 @@
 <template>
   <section class="home-hero">
     <div class="hero-text-box">
-      <h2>{{ header.partOne }}</h2>
-      <h2>{{ header.partTwo }}</h2>
+      <h2>{{ headerTop }}</h2>
+      <h2>{{ headerBottom }}</h2>
     </div>
     <div class="home-hero-changer">
       <div class="hero-filter"></div>
       <div
         class="main-hero"
-        :style="{ backgroundImage: `url('${mainImageSrc}')` }"
+        :style="{ backgroundImage: `url('${imageSrc}')` }"
       />
     </div>
   </section>
 </template>
 
 <script>
-import content from "@/services/content.js";
 
 export default {
   name: "HomeHero",
-  data() {
-    return {
-      header: content.page.home.hero.header,
-      images: [],
-      mainImageSrc: require("../../assets/stocks/hometheater_2.jpg"),
-    };
-  },
+  props: ["headerTop", "headerBottom", "imageSrc"],
 };
 </script>
 

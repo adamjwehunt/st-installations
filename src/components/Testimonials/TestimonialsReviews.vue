@@ -2,7 +2,7 @@
   <section class="reviews">
     <div class="container">
       <div class="row">
-        <h1 class="section-title">{{ reviews.header }}</h1>
+        <h1 class="section-title">{{ testimonialsView.reviewsHeader }}</h1>
         <hr class="section-hr" />
       </div>
       <div class="reviews-carousel">
@@ -15,20 +15,24 @@
             [992, 2],
           ]"
         >
-          <slide v-for="review in reviews.tt.reviewList" :key="review.id">
+          <slide v-for="review in thumbtackReviews" :key="review._id">
             <TestimonialsReviewsSlides
+              v-if="review.source === 'thumbtack'"
               :data="review"
-              :info="info.tt"
-              :logo="reviews.tt.logo"
-              :rating="`tt tt-${review.rating}`"
+              :link="basicInfo.thumbtackLink"
+              :alt="'Thumbtack logo'"
+              :logo="imageUrlFor(testimonialsView.thumbtackLogo)"
+              :rating="'tt tt-5'"
             />
           </slide>
-          <slide v-for="review in reviews.fb.reviewList" :key="review.id">
+          <slide v-for="review in facebookReviews" :key="review._id">
             <TestimonialsReviewsSlides
+              v-if="review.source === 'facebook'"
               :data="review"
-              :info="info.fb"
-              :logo="reviews.fb.logo"
-              :rating="`fb fb-${review.rating}`"
+              :link="basicInfo.facebookLink"
+              :alt="'Facebook logo'"
+              :logo="imageUrlFor(testimonialsView.facebookLogo)"
+              :rating="'fb fb-5'"
             />
           </slide>
         </carousel>
@@ -38,147 +42,154 @@
 </template>
 
 <script>
-import content from "@/services/content.js";
-import { Carousel, Slide } from "vue-carousel";
-import TestimonialsReviewsSlides from "./TestimonialsReviewsSlides.vue";
+import { Carousel, Slide } from 'vue-carousel';
+import TestimonialsReviewsSlides from './TestimonialsReviewsSlides.vue';
+import imageUrlBuilder from '@sanity/image-url';
+import sanity from '../../client';
+
+const imageBuilder = imageUrlBuilder(sanity);
 
 export default {
-  components: {
-    Carousel,
-    Slide,
-    TestimonialsReviewsSlides,
-  },
-  name: "TestimonialsReviews",
-  data() {
-    return {
-      reviews: content.page.testimonials.reviews,
-      info: content.info,
-    };
-  },
+	name: 'TestimonialsReviews',
+	props: ['testimonialsView', 'reviews', 'basicInfo'],
+  data: (instance) => ({
+    facebookReviews: instance.reviews.filter(review => review.source === 'facebook'),
+    thumbtackReviews: instance.reviews.filter(review => review.source === 'thumbtack'),
+  }),
+	components: {
+		Carousel,
+		Slide,
+		TestimonialsReviewsSlides,
+	},
+	methods: {
+		imageUrlFor(source) {
+			return imageBuilder.image(source);
+		},
+	},
 };
 </script>
 
 <style lang="less">
 .reviews {
-  .reviews-carousel {
-    display: flex;
-    justify-content: center;
-  }
+	.reviews-carousel {
+		display: flex;
+		justify-content: center;
+	}
 
-  .VueCarousel {
-    width: 680px;
+	.VueCarousel {
+		width: 680px;
 
-    .VueCarousel-slide {
-      display: flex;
-      justify-content: center;
-    }
+		.VueCarousel-slide {
+			display: flex;
+			justify-content: center;
+		}
 
-    .VueCarousel-navigation--disabled {
-      display: none;
-    }
+		.VueCarousel-navigation--disabled {
+			display: none;
+		}
 
-    .VueCarousel-navigation-button {
-      font-size: 30px !important;
-      top: 200px !important;
-    }
+		.VueCarousel-navigation-button {
+			font-size: 30px !important;
+			top: 200px !important;
+		}
 
-    .VueCarousel-navigation-prev {
-      left: 32%;
-    }
+		.VueCarousel-navigation-prev {
+			left: 32%;
+		}
 
-    .VueCarousel-navigation-next {
-      right: 32%;
-    }
+		.VueCarousel-navigation-next {
+			right: 32%;
+		}
 
-    .VueCarousel-navigation-prev,
-    .VueCarousel-navigation-next {
-      color: #797979;
-    }
+		.VueCarousel-navigation-prev,
+		.VueCarousel-navigation-next {
+			color: #797979;
+		}
 
-    .VueCarousel-pagination,
-    .VueCarousel-navigation--disabled {
-      display: none;
-    }
-  }
+		.VueCarousel-pagination,
+		.VueCarousel-navigation--disabled {
+			display: none;
+		}
+	}
 }
 
 @media only screen and (min-width: 400px) {
-  .reviews {
-    .VueCarousel {
-      .VueCarousel-navigation-prev {
-        left: 28%;
-      }
+	.reviews {
+		.VueCarousel {
+			.VueCarousel-navigation-prev {
+				left: 28%;
+			}
 
-      .VueCarousel-navigation-next {
-        right: 28%;
-      }
-    }
-  }
+			.VueCarousel-navigation-next {
+				right: 28%;
+			}
+		}
+	}
 }
 
 @media only screen and (min-width: 460px) {
-  .reviews {
-    .VueCarousel {
-      .VueCarousel-navigation-prev {
-        left: 24%;
-      }
+	.reviews {
+		.VueCarousel {
+			.VueCarousel-navigation-prev {
+				left: 24%;
+			}
 
-      .VueCarousel-navigation-next {
-        right: 24%;
-      }
-    }
-  }
+			.VueCarousel-navigation-next {
+				right: 24%;
+			}
+		}
+	}
 }
 
 @media only screen and (min-width: 520px) {
-  .reviews {
-    .VueCarousel {
-      .VueCarousel-navigation-prev {
-        left: 20%;
-      }
+	.reviews {
+		.VueCarousel {
+			.VueCarousel-navigation-prev {
+				left: 20%;
+			}
 
-      .VueCarousel-navigation-next {
-        right: 20%;
-      }
-    }
-  }
+			.VueCarousel-navigation-next {
+				right: 20%;
+			}
+		}
+	}
 }
 
 @media only screen and (min-width: 768px) {
-  .reviews {
-    .VueCarousel .VueCarousel-pagination {
-      display: block;
-    }
-  }
+	.reviews {
+		.VueCarousel .VueCarousel-pagination {
+			display: block;
+		}
+	}
 }
 
 @media only screen and (min-width: 992px) {
-  .reviews {
-    .VueCarousel {
-      width: 900px;
+	.reviews {
+		.VueCarousel {
+			width: 900px;
 
-      .VueCarousel-navigation-prev {
-        left: 5%;
-      }
+			.VueCarousel-navigation-prev {
+				left: 5%;
+			}
 
-      .VueCarousel-navigation-next {
-        right: 5%;
-      }
-    }
-  }
+			.VueCarousel-navigation-next {
+				right: 5%;
+			}
+		}
+	}
 }
 
 @media only screen and (min-width: 1260px) {
-  .reviews {
-    .VueCarousel {
-      .VueCarousel-navigation-prev {
-        left: -4%;
-      }
+	.reviews {
+		.VueCarousel {
+			.VueCarousel-navigation-prev {
+				left: -4%;
+			}
 
-      .VueCarousel-navigation-next {
-        right: -4%;
-      }
-    }
-  }
+			.VueCarousel-navigation-next {
+				right: -4%;
+			}
+		}
+	}
 }
 </style>

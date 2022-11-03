@@ -1,18 +1,18 @@
 <template>
   <router-link
-    :id="data.id"
+    :id="service.id"
     class="col-md-3 service-link"
-    :to="`${$router.options.routes[1].path}#${data.id}`"
+    :to="`${$router.options.routes[1].path}#${service.id}`"
     tag="div"
   >
-    <i :class="data.faIcon" class="fa" aria-hidden="true"></i>
-    <h2>{{ data.name }}</h2>
+    <i :class="service.icon" class="fa" aria-hidden="true"></i>
+    <h2>{{ service.name }}</h2>
   </router-link>
 </template>
 
 <script>
 export default {
-  props: ["data"],
+  props: ["service"],
   name: "HomeServicesLink",
 };
 </script>

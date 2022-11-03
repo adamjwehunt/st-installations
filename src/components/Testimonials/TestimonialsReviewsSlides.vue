@@ -2,8 +2,8 @@
   <div class="review">
     <div class="review-header">
       <h2>{{ data.name }}</h2>
-      <a :href="info.link">
-        <img class="img-responsive" :src="logo" :alt="info.alt" />
+      <a :href="link">
+        <img class="img-responsive" :src="logo" :alt="alt" />
       </a>
     </div>
     <div :class="`review-rating ${rating}`"></div>
@@ -15,7 +15,7 @@
 <script>
 export default {
   name: "TestimonialsReviewsSlides",
-  props: ["data", "info", "logo", "rating"],
+  props: ["data", "link", "alt", "logo", "rating"],
 };
 </script>
 
