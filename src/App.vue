@@ -1,7 +1,9 @@
 <template>
   <div class="app" v-if="!isLoading">
     <HeaderBar class="header" :class="getStickyStatus" :phone="basicInfo.phone" :logoLarge="basicInfo.logoLarge" :logoSmall="basicInfo.logoSmall" />
-    <router-view class="router-view" />
+		<div class="router-wrapper">
+			<router-view class="router-view" />
+		</div>
     <FooterArea :basicInfo="basicInfo" />
   </div>
 </template>
@@ -138,6 +140,10 @@ h2 {
 
 .router-view {
 	padding-top: 118px;
+}
+
+.router-wrapper {
+	min-height: 100vh;
 }
 
 .row {
