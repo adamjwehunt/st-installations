@@ -10,7 +10,7 @@
             class="v-form"
             method="POST"
             v-model="form.valid"
-            :action="`http://formspree.io/josh@strongtowerinstallations.com`"
+            action="https://formspree.io/f/xnqrorya"
           >
             <v-flex class="form-input-wrapper xs12 sm6">
               <v-text-field
