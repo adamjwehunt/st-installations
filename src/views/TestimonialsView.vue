@@ -71,6 +71,11 @@ export default {
     fetchData() {
       sanity.fetch(query).then(
         ({ testimonialsView, reviews, basicInfo }) => {
+          console.log(
+            `src/views/TestimonialsView.vue - 74 => testimonialsView: `,
+            "\n",
+            testimonialsView
+          );
           this.isLoading = false;
           this.testimonialsView = testimonialsView;
           this.reviews = reviews;

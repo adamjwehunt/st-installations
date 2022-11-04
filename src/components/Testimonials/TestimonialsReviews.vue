@@ -22,7 +22,8 @@
               :link="basicInfo.thumbtackLink"
               :alt="'Thumbtack logo'"
               :logo="imageUrlFor(testimonialsView.thumbtackLogo)"
-              :rating="'tt tt-5'"
+              :ratingLogo="imageUrlFor(testimonialsView.thumbTackRating)"
+              :ratingClass="'tt'"
             />
           </slide>
           <slide v-for="review in facebookReviews" :key="review._id">
@@ -32,7 +33,8 @@
               :link="basicInfo.facebookLink"
               :alt="'Facebook logo'"
               :logo="imageUrlFor(testimonialsView.facebookLogo)"
-              :rating="'fb fb-5'"
+              :ratingLogo="imageUrlFor(testimonialsView.facebookRating)"
+              :ratingClass="'fb'"
             />
           </slide>
         </carousel>

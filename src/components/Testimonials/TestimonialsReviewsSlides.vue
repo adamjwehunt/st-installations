@@ -6,7 +6,10 @@
         <img class="img-responsive" :src="logo" :alt="alt" />
       </a>
     </div>
-    <div :class="`review-rating ${rating}`"></div>
+    <div
+      :class="`review-rating ${ratingClass}`"
+      :style="{ backgroundImage: `url('${ratingLogo}')` }"
+    ></div>
     <div class="review-text">{{ data.text }}</div>
     <div class="review-date">{{ data.date }}</div>
   </div>
@@ -15,7 +18,7 @@
 <script>
 export default {
   name: "TestimonialsReviewsSlides",
-  props: ["data", "link", "alt", "logo", "rating"],
+  props: ["data", "link", "alt", "logo", "ratingLogo", "ratingClass"],
 };
 </script>
 
@@ -51,19 +54,11 @@ export default {
     &.tt {
       height: 16px;
       width: 85px;
-
-      &.tt-5 {
-        background-image: url("../../assets/social/thumbtack_5star.png");
-      }
     }
 
     &.fb {
       height: 25px;
       width: 50px;
-
-      &.fb-5 {
-        background-image: url("../../assets/social/facebook_5star.png");
-      }
     }
   }
 
