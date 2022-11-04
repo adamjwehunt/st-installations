@@ -1,7 +1,8 @@
 {
   "root": true,
   "project": {
-    "name": "st-installations"
+    "name": "st-installations",
+    "basePath": "/studio"
   },
   "api": {
     "projectId": "25hh13q2",
